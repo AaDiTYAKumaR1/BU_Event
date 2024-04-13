@@ -16,13 +16,26 @@ import Event from './components/Event'
 import UpcomingEvents from './components/UpcomingEvent'
 import Evcountdown from './components/Evcountdown'
 import SubmitRegister from './components/SubmitRegister'
-import Submitlogin from './components/Submitlogin'
-
+import Submitlogin from './components/Submitlogin';
+import { useAuth0  } from '@auth0/auth0-react'
+// import {authimg} from './../public/authlogin.jpg'
 function App() {
-  
+  const {user ,loginWithRedirect } =useAuth0();
   return (
     <>
-       <BrowserRouter>
+     { !user &&
+     <div style={{height:'100vh',backgroundImage:"url(authlogin.jpg)",width:'100vw',backgroundRepeat:'no-repeat',backgroundSize:'cover',
+     display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',gap:'48px'
+     
+     }}>
+          <h1 style={{fontWeight:'bold',fontFamily:'cursive'}} >Welcome to @BU Event</h1>
+        <button onClick={(e)=>loginWithRedirect()} style={{padding:'16px 56px',fontWeight:'bolder',fontSize:'24px',borderRadius:'16px'
+      
+      }}> login</button>
+     </div>
+     }
+     
+    {user &&    <BrowserRouter>
     <Layout>
     <Routes>
       <Route path='/' exact element={<Homepage/>} />
@@ -38,7 +51,7 @@ function App() {
 
     </Routes>
     </Layout>
-    </BrowserRouter>  
+    </BrowserRouter>  }
        
  
      {/* <SubmitRegister/> */}
