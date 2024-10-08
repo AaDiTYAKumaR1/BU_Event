@@ -75,7 +75,7 @@ nav ul li a:hover{
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 
 .hero {
-  background-image: url("hero-background1.jpg");
+  /* background-image: url("../../public/hero-background.jpg"); */
   background-size: cover;
   background-position: center;
   height: 100vh;

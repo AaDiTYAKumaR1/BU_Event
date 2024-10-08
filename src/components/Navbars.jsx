@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 // import {logo} from '../../public/iconlogo.png'
 function Navbars() {
-  const {logout} = useAuth0();
+  // const {logout} = useAuth0();
   return (
     <>
     <header style={{zIndex:'5'}}>
@@ -22,8 +22,8 @@ function Navbars() {
       
        
 
-        <button style={{border:'none',color:'white',backfaceVisibility:'hidden',marginRight:'48px',backgroundColor:'red',padding:"14px 20px",border:'2px',borderRadius:'12px',fontWeight:'bold'}} onClick={(e)=>logout({ logoutParams: { returnTo: window.location.origin }})}>logout</button>
-       
+        {/* <button style={{border:'none',color:'white',backfaceVisibility:'hidden',marginRight:'48px',backgroundColor:'red',padding:"14px 20px",border:'2px',borderRadius:'12px',fontWeight:'bold'}} >logout</button>
+        */}
       
 		</ul>
 	  </nav>

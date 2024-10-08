@@ -23,7 +23,7 @@ function App() {
   const {user ,loginWithRedirect } =useAuth0();
   return (
     <>
-     { !user &&
+     {/* { !user &&
      <div style={{height:'100vh',backgroundImage:"url(authlogin.jpg)",width:'100vw',backgroundRepeat:'no-repeat',backgroundSize:'cover',
      display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',gap:'48px'
      
@@ -33,9 +33,9 @@ function App() {
       
       }}> login</button>
      </div>
-     }
+     } */}
      
-    {user &&    <BrowserRouter>
+       <BrowserRouter>
     <Layout>
     <Routes>
       <Route path='/' exact element={<Homepage/>} />
@@ -51,7 +51,7 @@ function App() {
 
     </Routes>
     </Layout>
-    </BrowserRouter>  }
+    </BrowserRouter>  
        
  
      {/* <SubmitRegister/> */}

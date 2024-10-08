@@ -6,12 +6,13 @@ import Evcountdown from './Evcountdown'
 function Homepage() {
 
     const Eventdate = "2024-04-30T06:59:59";
+    // const Eventdate=Date.now().toString()
     const E1 = "2024-05-05T17:59:59";
     const E2 = "2024-04-15T19:59:59";
     const E3 = "2024-05-05T17:59:59";
     return (
         <>
-            <section className="hero" style={{ textAlign: 'center' }}>
+            <section className="hero" style={{ textAlign: 'center',backgroundImage: `url("hero-background.jpg")` }}>
                 <div className="hero-content">
                     <h1 style={{ fontFamily: 'cursive', width: '600px' }}>Welcome to <span style={{ color: 'orange' }}>Events@BU</span></h1>
                     <p>Explore the vibrant world of university events</p>
